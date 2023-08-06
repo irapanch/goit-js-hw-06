@@ -24,13 +24,15 @@ const ingredients = [
 
 
 const ulElement = document.querySelector("#ingredients"); // дісталися до ul з id="ingredients"
-
-ingredients.forEach((ingredient) => { //перебираємо масив
-  const liElement = document.createElement("li");  // створюємо новий елемент li
-  liElement.textContent = ingredient; // встановлюємо текстовий вміст елементу li, який заміняємо на значення ingredient.
-  liElement.classList.add("item"); // додає клас "item" до спискового елементу liElement
-
-  ulElement.appendChild(liElement); //вставляємо усі <li> за одну операцію у список ul#ingredients
-  
+const newElements = ingredients.map((_, index) => { //перебираємо масив
+  let liElement = document.createElement('li'); // створюємо новий елемент li
+  liElement.textContent = ingredients[index]; // встановлюємо текстовий вміст елементу li
+  liElement.className = 'item'; // додаємо клас "item" до спискового елементу liElement
+  return liElement;
 });
+ulElement.append(...newElements);
+//вставляємо усі <li> з фрагмета за одну операцію у список ul#ingredients
+
+ 
+
 
