@@ -25,6 +25,7 @@
 const userForm = document.querySelector('.login-form'); // Знаходимо форму з класом "login-form"
 
 userForm.addEventListener('submit', submitForm); // додаємо прослуховувач подій 'submit' до форми
+
 function submitForm(event){ // функція виконується, коли юзер  надсилає форму 
   event.preventDefault(); // спершу виконується метод , який перешкоджає стандартній поведінці форми (оновлення сторінки)
   const userEmail = userForm.elements.email.value; //витягуємо значення поля "email"

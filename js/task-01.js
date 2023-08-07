@@ -11,6 +11,8 @@ console.log(`Number of categories: ${categoryItem.length}`); //виводимо 
 
 // Для кожного элемента li.item у списку ul#categories, знайде і виведе в консоль текст заголовку елемента (тегу <h2>) і кількість елементів в категорії (усіх <li>, вкладених в нього).
 // Для виконання цього завдання потрібно використати метод forEach() і властивості навігації по DOM.
+
+
 const categoryArr = [...categoryItem]; // перетворили в масив
 categoryArr.forEach((category) => {  // перебираємо масив
 

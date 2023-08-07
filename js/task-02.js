@@ -24,7 +24,9 @@ const ingredients = [
 
 
 const ulElement = document.querySelector("#ingredients"); // дісталися до ul з id="ingredients"
-const newElements = ingredients.map((_, index) => { //перебираємо масив
+
+const newElements = ingredients.map((elem, index) => { //перебираємо масив
+
   let liElement = document.createElement('li'); // створюємо новий елемент li
   liElement.textContent = ingredients[index]; // встановлюємо текстовий вміст елементу li
   liElement.className = 'item'; // додаємо клас "item" до спискового елементу liElement
